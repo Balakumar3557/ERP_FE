@@ -8,6 +8,9 @@ import Navbar from '../Navbar/Navbar';
 import RoomAllocation from '../../mastermanagement/Hostel/Room Allocation/RoomAllocation';
 import Gatepass from '../../mastermanagement/Hostel/Gatepass/Gatepass';
 
+import Registration from '../../mastermanagement/Student/Registration/Registration';
+import AddRegistration from '../../mastermanagement/Student/Registration/AddRegistration/AddRegistration';
+
 function Admin() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true); // State to manage sidebar visibility
 
@@ -26,7 +29,8 @@ function Admin() {
                 <Routes>
                     <Route path='/' element={<DashBoard/>} />
                     <Route path="/Hostel/*" element={<Room/>}/>
-                    <Route path='/Gatepass/*' element={<Gate_pass/>}/>
+                    <Route path='/Gatepass/*' element={<GatePass/>}/>
+                    <Route path='/Student/*' element={<StudentDetails/>}/>
                 </Routes>
             </main>
         </div>
@@ -53,7 +57,7 @@ function Room(){
     )
 }
 
-function Gate_pass(){
+function GatePass(){
     return(
        <>
             <Routes>
@@ -61,6 +65,17 @@ function Gate_pass(){
             </Routes>
        </>
     )
+}
+
+function StudentDetails(){
+    return(
+        <>
+             <Routes>
+                 <Route path='/Registration' element={<Registration/>} />
+                 <Route path='/Add-Registration' element={<AddRegistration/>}/>
+             </Routes>
+        </>
+     )
 }
 
 export default Admin;

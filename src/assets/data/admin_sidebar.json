@@ -54,7 +54,7 @@
                 "link": "#student",
                 "icon": "ni ni-hat-3",
                 "subMenu": [
-                    { "id": "1-4-1", "title": "Registration", "link": "#Registration", "icon": "ni ni-badge" },
+                    { "id": "1-4-1", "title": "Registration", "link": "/adm/Student/Registration", "icon": "ni ni-badge" },
                     { "id": "1-4-2", "title": "Transfer", "link": "#Transfer", "icon": "ni ni-send" },
                     { "id": "1-4-3", "title": "Promotion", "link": "#Promotion", "icon": "ni ni-chart-bar-32" },
                     { "id": "1-4-4", "title": "Student Documents", "link": "#Student Documents", "icon": "ni ni-folder-17" },

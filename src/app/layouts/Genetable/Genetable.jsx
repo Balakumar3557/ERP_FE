@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Genetable({ data, filterEnabled, column, Title }) {
+function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [filterColumn, setFilterColumn] = useState("name");
     const [startDate, setStartDate] = useState("");
@@ -18,14 +18,17 @@ function Genetable({ data, filterEnabled, column, Title }) {
         const valueToCheck = item[filterColumn]?.toLowerCase() || "";
         const matchesSearchTerm = valueToCheck.includes(searchTerm.toLowerCase());
 
-        const employedDateParts = item.employedDate.split("/");
-        const employedDate = new Date(`${employedDateParts[2]}-${employedDateParts[1]}-${employedDateParts[0]}`);
-        const startDateObj = startDate ? new Date(startDate) : null;
-        const endDateObj = endDate ? new Date(endDate) : null;
+        let matchesDateRange = true;
+        if (filterDateColumn) {
+            const employedDateParts = item.employedDate.split("/");
+            const employedDate = new Date(`${employedDateParts[2]}-${employedDateParts[1]}-${employedDateParts[0]}`);
+            const startDateObj = startDate ? new Date(startDate) : null;
+            const endDateObj = endDate ? new Date(endDate) : null;
 
-        const matchesDateRange =
-            (!startDateObj || employedDate >= startDateObj) &&
-            (!endDateObj || employedDate <= endDateObj);
+            matchesDateRange =
+                (!startDateObj || employedDate >= startDateObj) &&
+                (!endDateObj || employedDate <= endDateObj);
+        }
 
         return matchesSearchTerm && matchesDateRange;
     });
@@ -76,29 +79,49 @@ function Genetable({ data, filterEnabled, column, Title }) {
                                             onChange={(e) => setSearchTerm(e.target.value)}
                                         />
                                     </div>
-                                    <div className="col-md-3">
-                                        <label htmlFor="startDate" className="form-label">Start Date</label>
-                                        <input
-                                            id="startDate"
-                                            type="date"
-                                            className="form-control"
-                                            value={startDate}
-                                            onChange={(e) => setStartDate(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="col-md-3">
-                                        <label htmlFor="endDate" className="form-label">End Date</label>
-                                        <input
-                                            id="endDate"
-                                            type="date"
-                                            className="form-control"
-                                            value={endDate}
-                                            onChange={(e) => setEndDate(e.target.value)}
-                                        />
-                                    </div>
+
+                                    {filterDateColumn && (
+                                        <>
+                                            <div className="col-md-3">
+                                                <label htmlFor="startDate" className="form-label">Start Date</label>
+                                                <input
+                                                    id="startDate"
+                                                    type="date"
+                                                    className="form-control"
+                                                    value={startDate}
+                                                    onChange={(e) => setStartDate(e.target.value)}
+                                                />
+                                            </div>
+                                            <div className="col-md-3">
+                                                <label htmlFor="endDate" className="form-label">End Date</label>
+                                                <input
+                                                    id="endDate"
+                                                    type="date"
+                                                    className="form-control"
+                                                    value={endDate}
+                                                    onChange={(e) => setEndDate(e.target.value)}
+                                                />
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                             )}
                         </div>
+
+                        {/* Row selection dropdown */}
+                        {/* <div className="d-flex justify-content-end mx-5 mb-3">
+                            <label htmlFor="rowsPerPage" className="me-2">Rows per page:</label>
+                            <select
+                                id="rowsPerPage"
+                                className="form-select w-auto"
+                                value={rowsPerPage}
+                                onChange={(e) => setRowsPerPage(Number(e.target.value))}
+                            >
+                                <option value={5}>5</option>
+                                <option value={10}>10</option>
+                                <option value={20}>20</option>
+                            </select>
+                        </div> */}
 
                         {/* Table View */}
                         <div className="table-responsive">
