@@ -1,98 +1,32 @@
-/* Main menu active item */
+/* Active main menu item styling */
 .nav-link.active {
     background-color: #f0f4f8;
-    color: #007bff; /* Text color for active main menu item */
+    color: #007bff;
     font-weight: bold;
+    border-radius: 5px;  /* Adding border-radius for rounded corners */
 }
 
-/* Submenu styling */
-.sub-menu-item a {
-    color: #333; /* Default text color */
+/* Active submenu item styling */
+.sub-menu-item .sub-menu-link.active {
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Submenu item styling */
+.sub-menu-item .sub-menu-link {
+    color: #333;
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: left; /* Aligns text and icons */
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;  /* Smooth transition for all properties */
 }
 
-
-/* Sidenav Header */
-.sidenav-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: #fff;
-    padding: 1rem;
-    border-bottom: 1px solid #e0e0e0; /* Optional header border */
-}
-
-/* Submenu active item */
-.sub-menu-item a.active {
-    color: #007bff; /* Text color for active submenu item */
-    font-weight: bold;
-}
-
-/* Hover color for submenu items */
-.sub-menu-item a:hover {
+/* Hover styling for submenu items */
+.sub-menu-item .sub-menu-link:hover {
     color: #007bff;
-}
-
-/* Indentation for nested submenu levels */
-.sub-menu {
-    padding-left: 20px;
-}
-
-.sub-menu.level-2 {
-    padding-left: 40px;
-}
-
-.sub-menu.level-3 {
-    padding-left: 60px;
-}
-
-/* Remove bullet points for sub-menu items */
-.sub-menu,
-.sub-menu-item {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* Padding adjustments */
-.sidenav .sub-menu {
-    padding-left: 1.9rem;
-}
-
-.sidenav .nested-submenu {
-    padding-left: 0.2rem;
-}
-
-/* Sidebar title color change on click */
-.nav-link.active,
-.sub-menu-link.active {
-    color: #007bff; /* Change to your desired color */
-    font-weight: bold;
-}
-
-.nav-link.active .icon,
-.sub-menu-link.active i {
-    color: #007bff; /* Match the color of the text */
-}
-
-/* Sidebar styles */
-.sidenav {
-    position: relative;
-    height: 100vh;
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Hide scrollbar for Chrome, Safari, and Opera */
-.sidenav::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar width */
-}
-
-/* Hide scrollbar for IE, Edge, and Firefox */
-.sidenav {
-    scrollbar-width: none; /* For Firefox */
 }
 
 /* Chevron icon rotation */
@@ -104,3 +38,265 @@
     transform: rotate(180deg);
 }
 
+/* Sidebar header */
+.sidenav-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Indentation for nested submenu levels */
+.sub-menu {
+    padding-left: 10px;
+}
+
+.sub-menu.level-2 {
+    padding-left: 40px;
+}
+
+.sub-menu.level-3 {
+    padding-left: 60px;
+}
+
+/* Remove bullet points and adjust padding for sub-menus */
+.sub-menu,
+.sub-menu-item {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Additional padding for nested submenus */
+.sidenav .sub-menu {
+    padding-left: 1.5rem;
+}
+
+.sidenav .nested-submenu {
+    padding-left: 0.2rem;
+}
+
+/* Sidebar active path indicator */
+.active-path {
+    border-left: 4px solid #007bff;
+}
+
+/* Icon color for active items */
+.nav-link.active .icon,
+.sub-menu-link.active i {
+    color: #007bff;
+}
+
+/* Sidebar container styling */
+.sidenav {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adding shadow for better separation */
+}
+
+/* Hide scrollbar styling */
+.sidenav::-webkit-scrollbar {
+    width: 0;
+}
+
+.sidenav {
+    scrollbar-width: none;
+}
+
+/* Expand-all button styles */
+.expand-all-btn {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    padding: 10px; /* Add padding if desired */
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-circle:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+/* Sidebar General Styling */
+.sidenav {
+    width: 250px;
+    transition: all 0.3s;
+}
+
+.sidenav-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-brand-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.navbar-brand span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px; /* Smooth edges for all menu items */
+}
+
+.nav-link.active {
+    background-color: #f0f0f0;
+}
+
+/* Submenu styles */
+.sub-menu {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.sub-menu-item {
+    padding: 8px 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sub-menu-link.active {
+    color: #007bff;
+}
+
+.icon {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Rotate chevron for expanded menus */
+.rotate {
+    transform: rotate(360deg); /* Rotate by 180 degrees */
+    transition: transform 0.3s ease; /* Smooth transition for the rotation */
+}
+
+
+.nested-submenu {
+    padding-left: 15px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .sidenav {
+        width: 200px;
+    }
+
+    .sidenav-header {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 8px;
+    }
+
+    .sub-menu {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 769px) {
+    .sidenav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidenav.show {
+        transform: translateX(0);
+    }
+
+    .sidenav-header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .sidenav {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+    }
+
+    .sub-menu {
+        padding-left: 10px;
+    }
+}
+.critical-action-container {
+    position: absolute;
+    bottom: 20px; /* Place at the bottom */
+    width: 100%;
+    text-align: center;
+}
+
+.critical-action-btn {
+    background-color: red; /* Color to make it stand out */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.critical-action-btn:hover {
+    background-color: darkred; /* Hover effect */
+}

@@ -11,7 +11,7 @@ import Admin from './app/layouts/Admin/Admin';
 import Staff from './app/layouts/Staff/Staff';
 
 // Student management
-import Student from './app/layouts/Student/Student'
+import Student from './app/layouts/Student/Student';
 
 function App() { 
   return (
@@ -21,6 +21,8 @@ function App() {
         <Route path="/adm/*" element={<Admin />} />
         <Route path="/staff/*" element={<Staff />} />
         <Route path="/student/*" element={<Student />} />
+        {/* Catch-all route for unmatched paths */}
+        <Route path="*" element={<Signin />} /> {/* or a NotFound component */}
       </Routes>
     </Router>
   );

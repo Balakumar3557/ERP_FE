@@ -1,15 +1,28 @@
 import React, { useState } from "react";
+import Modal from "./Modal/Modal"; // Import Modal component
+import "./Genetable.css"; // Custom styles if needed for further responsive adjustments
 
-function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
+function Genetable({ data, filterEnabled, filterDateColumn, column, Title, Page,preview }) {
     const [searchTerm, setSearchTerm] = useState("");
     const [filterColumn, setFilterColumn] = useState("name");
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
-    const [rowsPerPage] = useState(5);
+    const [rowsPerPage] = useState(Page);
+    const [modalVisible, setModalVisible] = useState(false); // State for modal visibility
+    const [viewData, setViewData] = useState(null); // State to store data to be displayed in the modal
 
     const handleEdit = (authorName) => {
         console.log(`Edit ${authorName}`);
+    };
+
+    const handleView = (item) => {
+        setViewData(item); // Set the data for the modal
+        setModalVisible(true); // Show the modal
+    };
+
+    const handleCloseModal = () => {
+        setModalVisible(false); // Close the modal
     };
 
     const filteredData = data.filter((item) => {
@@ -55,7 +68,7 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
 
                             {filterEnabled && (
                                 <div className="row mb-3 justify-content-center">
-                                    <div className="col-md-3">
+                                    <div className="col-12 col-md-6 col-lg-3">
                                         <label htmlFor="filterColumn" className="form-label">Filter By</label>
                                         <select
                                             id="filterColumn"
@@ -68,7 +81,7 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                                             ))}
                                         </select>
                                     </div>
-                                    <div className="col-md-3">
+                                    <div className="col-12 col-md-6 col-lg-3 mt-2 mt-md-0">
                                         <label htmlFor="searchTerm" className="form-label">Search</label>
                                         <input
                                             id="searchTerm"
@@ -82,7 +95,7 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
 
                                     {filterDateColumn && (
                                         <>
-                                            <div className="col-md-3">
+                                            <div className="col-12 col-md-6 col-lg-3 mt-2 mt-md-0">
                                                 <label htmlFor="startDate" className="form-label">Start Date</label>
                                                 <input
                                                     id="startDate"
@@ -92,7 +105,7 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                                                     onChange={(e) => setStartDate(e.target.value)}
                                                 />
                                             </div>
-                                            <div className="col-md-3">
+                                            <div className="col-12 col-md-6 col-lg-3 mt-2 mt-md-0">
                                                 <label htmlFor="endDate" className="form-label">End Date</label>
                                                 <input
                                                     id="endDate"
@@ -108,21 +121,6 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                             )}
                         </div>
 
-                        {/* Row selection dropdown */}
-                        {/* <div className="d-flex justify-content-end mx-5 mb-3">
-                            <label htmlFor="rowsPerPage" className="me-2">Rows per page:</label>
-                            <select
-                                id="rowsPerPage"
-                                className="form-select w-auto"
-                                value={rowsPerPage}
-                                onChange={(e) => setRowsPerPage(Number(e.target.value))}
-                            >
-                                <option value={5}>5</option>
-                                <option value={10}>10</option>
-                                <option value={20}>20</option>
-                            </select>
-                        </div> */}
-
                         {/* Table View */}
                         <div className="table-responsive">
                             <table className="table align-items-center mb-0 text-center">
@@ -132,14 +130,20 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                                             <th key={index}>{col.display_name}</th>
                                         ))}
                                         <th>Actions</th>
+                                        {preview && (
+                                        <th >Preview</th>
+                                        )}
                                     </tr>
                                 </thead>
-                                <tbody className="text-sm">
+                                <tbody className="text-sm text-center text-start">
                                     {currentData.map((item, index) => (
                                         <tr key={index}>
+                                            {/* Displaying each column's data */}
                                             {column.map((col, colIndex) => (
                                                 <td key={colIndex}>{item[col.column]}</td>
                                             ))}
+
+                                            {/* Action Buttons (e.g., Edit) */}
                                             <td>
                                                 <button
                                                     className="btn btn-primary btn-sm"
@@ -148,24 +152,46 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                                                     Edit
                                                 </button>
                                             </td>
+
+                                            {/* Conditionally Render "View" Button */}
+                                            {preview && (
+                                                <td>
+                                                    <button
+                                                        className="btn btn-info btn-sm ms-2"
+                                                        onClick={() => handleView(item)}
+                                                    >
+                                                        View
+                                                    </button>
+                                                </td>
+                                            )}
                                         </tr>
                                     ))}
                                 </tbody>
+
                             </table>
                         </div>
+                        
+                        
 
                         {/* Pagination Controls */}
-                        <div className="d-flex justify-content-between mx-4">
+                        <div className="d-flex flex-column flex-md-row align-items-center justify-content-between w-100 my-4">
+                            {/* Previous Button */}
                             <button
-                                className="btn btn-secondary"
+                                className="btn btn-secondary mb-2 mb-md-0"
                                 onClick={handlePrevPage}
                                 disabled={currentPage === 1}
                             >
                                 Previous
                             </button>
-                            <span>Page {currentPage} of {totalPages}</span>
+
+                            {/* Page Info */}
+                            <span className="my-2 mx-1 text-center text-md-start">
+                                Page {currentPage} of {totalPages}
+                            </span>
+
+                            {/* Next Button */}
                             <button
-                                className="btn btn-secondary"
+                                className="btn btn-secondary mb-2 mb-md-0"
                                 onClick={handleNextPage}
                                 disabled={currentPage === totalPages}
                             >
@@ -175,6 +201,9 @@ function Genetable({ data, filterEnabled, filterDateColumn, column, Title }) {
                     </div>
                 </div>
             </div>
+
+            {/* Modal Component */}
+            <Modal show={modalVisible} data={viewData} onClose={handleCloseModal} />
         </div>
     );
 }

@@ -1,6 +1,13 @@
-/* Add this to your CSS file */
-input[type="text"], .form-select {
-    width: auto; /* Adjust width for a better fit */
-    margin-right: 10px; /* Space between elements */
-  }
-  
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table thead th {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .card-header .row > div {
+        margin-top: 10px; /* Ensure space between stacked elements on mobile */
+    }
+}

@@ -39,7 +39,7 @@ function Registration() {
         <div className="container-fluid py-6">
             <div className="d-flex justify-content-between align-items-center mb-2 px-4">
                 <h2 className="h2 font-weight-bolder text-white mb-0">Registration</h2>
-                <Link to="/adm/Student/Add-Registration">
+                <Link to="/adm/Master/Student/Add-Registration">
                     <button className="btn btn-light text-dark">
                         Add New
                     </button>

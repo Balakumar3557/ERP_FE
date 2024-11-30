@@ -4,34 +4,47 @@
         "title": "Master",
         "icon": "ni ni-tv-2 text-primary",
         "subMenu": [
+            
             {
                 "id": "1-1",
-                "title": "Hostel",
-                "link": "#hostel",
-                "icon": "ni ni-building",
-                "subMenu": [
-                    { "id": "1-1-1", "title": "Academic", "link": "/adm/Hostel/Room-Allocation", "icon": "ni ni-hat-3" },
-                    { "id": "1-1-2", "title": "Student", "link": "/student", "icon": "ni ni-circle-08" },
-                    { "id": "1-1-3", "title": "Staff", "link": "/staff", "icon": "ni ni-single-02" }
-                ]
-            },
-            {
-                "id": "1-2",
                 "title": "Academic",
                 "link": "#Academic",
                 "icon": "ni ni-books",
                 "subMenu": [
-                    { "id": "1-2-1", "title": "Academic Year", "link": "#Academic-year", "icon": "ni ni-calendar-grid-58" },
-                    { "id": "1-2-2", "title": "Degree", "link": "#Degree", "icon": "ni ni-badge" },
-                    { "id": "1-2-3", "title": "State", "link": "#State", "icon": "ni ni-world" },
-                    { "id": "1-2-4", "title": "City", "link": "#City", "icon": "ni ni-pin-3" },
-                    { "id": "1-2-5", "title": "Year", "link": "#year", "icon": "ni ni-calendar-grid-58" },
-                    { "id": "1-2-6", "title": "Semester", "link": "#Semester", "icon": "ni ni-collection" },
-                    { "id": "1-2-7", "title": "Course", "link": "#Course", "icon": "ni ni-book-bookmark" },
-                    { "id": "1-2-8", "title": "Grading System", "link": "#Grading-System", "icon": "ni ni-chart-bar-32" },
-                    { "id": "1-2-9", "title": "Student Status", "link": "#StudentStatus", "icon": "ni ni-circle-08" },
-                    { "id": "1-2-10", "title": "Placement", "link": "#Placement", "icon": "ni ni-trophy" },
-                    { "id": "1-2-11", "title": "Scholarship", "link": "#Scholarship", "icon": "ni ni-money-coins" }
+ 
+                    { "id": "1-2-1", "title": "Academic Year", "link": "/adm/Master/Academic/Academic-AcademicYear", "icon": "ni ni-calendar-grid-58" },
+                    { "id": "1-2-3", "title": "Designation", "link": "/adm/Master/Academic/Academic-Designation", "icon": "ni ni-world" },
+                    { "id": "1-2-4", "title": "Education Level", "link": "/adm/Master/Academic/Academic-EducationalLevel", "icon": "ni ni-money-coins" },
+                    { "id": "1-2-5", "title": "Degree", "link": "/adm/Master/Academic/Academic-Degree", "icon": "ni ni-badge" },
+                    { "id": "1-2-6", "title": "Department", "link": "/adm/Master/Academic/Academic-Department", "icon": "ni ni-circle-08" },
+                    { "id": "1-2-7", "title": "Section", "link": "/adm/Master/Academic/Academic-Section", "icon": "ni ni-collection" },
+                    { "id": "1-2-8", "title": "Semester", "link": "/adm/Master/Academic/Academic-Semester", "icon": "ni ni-collection" },
+                    { "id": "1-2-9", "title": "Subject", "link": "/adm/Master/Academic/Academic-Subject", "icon": "ni ni-collection" },
+                    { "id": "1-2-10", "title": "Grade", "link": "/adm/Master/Academic/Academic-Grade", "icon": "ni ni-chart-bar-32" },
+                    { "id": "1-2-11", "title": "Placement", "link": "/adm/Master/Academic/Academic-Placement", "icon": "ni ni-trophy" },
+                    { "id": "1-2-12", "title": "Scholarship", "link": "/adm/Master/Academic/Academic-Scholarship", "icon": "ni ni-money-coins" },
+                    { "id": "1-2-13", "title": "Student Status", "link": "/adm/Master/Academic/Academic-Student-Status", "icon": "ni ni-circle-08" },
+                    { "id": "1-2-14", "title": "State", "link": "/adm/Master/Academic/Academic-State", "icon": "ni ni-world" },
+                    { "id": "1-2-15", "title": "City", "link": "/adm/Master/Academic/Academic-city", "icon": "ni ni-pin-3" }
+                    
+                
+                   ]
+            },
+            {
+                "id": "1-2",
+                "title": "Hostel",
+                "link": "#hostel",
+                "icon": "ni ni-building",
+                "subMenu": [
+
+                    { "id": "1-1-1", "title": "Hostel Creation","link": "/adm/Master/HostelMaster/Hostel-HostelCreation", "icon": "ni ni-cart"},
+                    { "id": "1-1-2", "title": "Room creation","link": "/adm/Master/HostelMaster/Hostel-RoomCreation", "icon": "ni ni-single-02" },  
+                    { "id": "1-1-3", "title": "Food Type", "link": "/adm/Master/HostelMaster/Hostel-FoodType","icon": "ni ni-building" },
+                    { "id": "1-1-4", "title": "Food Name", "link": "/adm/Master/HostelMaster/Hostel-FoodName","icon": "ni ni-money-coins" },
+                    { "id": "1-1-5", "title": "Snack Name","link": "/adm/Master/HostelMaster/Hostel-SnackName", "icon": "ni ni-cart"},
+                    { "id": "1-1-6", "title": "Room Management","link": "/adm/Master/HostelMaster/Hostel-RoomManagement", "icon": "ni ni-single-02" },  
+                    { "id": "1-1-7", "title": "Meal Planning", "link": "/adm/Master/HostelMaster/Hostel-MealPlanning","icon": "ni ni-building" },
+                    { "id": "1-1-8", "title": "Snack Planning", "link": "/adm/Master/HostelMaster/Hostel-SnackPlanning","icon": "ni ni-money-coins" }
                 ]
             },
             {
@@ -40,7 +53,7 @@
                 "link": "#staff",
                 "icon": "ni ni-single-02",
                 "subMenu": [
-                    { "id": "1-3-1", "title": "Registration", "link": "#Registration", "icon": "ni ni-badge" },
+                    { "id": "1-3-1", "title": "Registration", "link": "/adm/Staff/Staff-Registraion", "icon": "ni ni-badge" },
                     { "id": "1-3-2", "title": "Staff Document", "link": "#Staff-Document", "icon": "ni ni-folder-17" },
                     { "id": "1-3-3", "title": "Subjects Handled", "link": "#Subjects-Handled", "icon": "ni ni-books" },
                     { "id": "1-3-4", "title": "Attendance", "link": "#Attendance", "icon": "ni ni-check-bold" },
@@ -54,13 +67,43 @@
                 "link": "#student",
                 "icon": "ni ni-hat-3",
                 "subMenu": [
-                    { "id": "1-4-1", "title": "Registration", "link": "/adm/Student/Registration", "icon": "ni ni-badge" },
+                    { "id": "1-4-1", "title": "Registration", "link": "/adm/Master/Student/Registration", "icon": "ni ni-badge" },
                     { "id": "1-4-2", "title": "Transfer", "link": "#Transfer", "icon": "ni ni-send" },
                     { "id": "1-4-3", "title": "Promotion", "link": "#Promotion", "icon": "ni ni-chart-bar-32" },
                     { "id": "1-4-4", "title": "Student Documents", "link": "#Student Documents", "icon": "ni ni-folder-17" },
                     { "id": "1-4-5", "title": "Attendance", "link": "#Attendance", "icon": "ni ni-check-bold" },
                     { "id": "1-4-6", "title": "Library", "link": "#Library", "icon": "ni ni-collection" },
                     { "id": "1-4-7", "title": "Fees Details", "link": "#Fees Details", "icon": "ni ni-money-coins" }
+                ]
+            },
+            {
+                "id": "1-5",
+                "title": "Transport",
+                "link": "#Transport",
+                "icon": "ni ni-bus-front-12",
+                "subMenu": [
+                    { "id": "1-5-1", "title": "Location Selector", "link": "/adm/Master/Transport/LocationSelector", "icon": "ni ni-chart-bar-32" },
+                    { "id": "1-5-2", "title": "Route Creation", "link": "/adm/Master/Transport/RouteCreation", "icon": "ni ni-badge" },
+                    { "id": "1-5-3", "title": "Stage Creation", "link": "/adm/Master/Transport/StageCreation", "icon": "ni ni-send" },
+                    { "id": "1-5-4", "title": "Vehicle Entry", "link": "/adm/Master/Transport/VehicleEntry", "icon": "ni ni-chart-bar-32" },
+                    { "id": "1-5-5", "title": "Driver Details", "link": "/adm/Master/Transport/DriverDetails", "icon": "ni ni-badge" },
+                    { "id": "1-5-6", "title": "Trip Entry", "link": "/adm/Master/Transport/TripEntry", "icon": "ni ni-send" },
+                    { "id": "1-5-7", "title": "Trip Change Entry", "link": "/adm/Master/Transport/TripChangeEntry", "icon": "ni ni-chart-bar-32" }
+                    
+                ]
+            },
+            {
+                "id": "1-6",
+                "title": "Library",
+                "link": "#Library",
+                "icon": "ni ni-books",
+                "subMenu": [
+                    { "id": "1-6-1", "title": "LibraryName", "link": "/adm/Master/LibraryMaster/Library-LibraryName", "icon": "ni ni-badge" },
+                    { "id": "1-6-2", "title": "BookTitle", "link": "/adm/Master/LibraryMaster/Library-BookTitle", "icon": "ni ni-badge" },
+                    { "id": "1-6-3", "title": "BookSubTitle", "link": "/adm/Master/LibraryMaster/Library-BookSubTitle", "icon": "ni ni-badge" },
+                    { "id": "1-6-3", "title": "BookMaster", "link": "/adm/Master/LibraryMaster/Library-BookMaster", "icon": "ni ni-badge" }
+                    
+                    
                 ]
             }
         ]
@@ -70,13 +113,14 @@
         "title": "Hostel",
         "icon": "ni ni-building text-warning",  
         "subMenu": [
+
             {
                 "id": "2-1",
                 "title": "Registration",
                 "link": "#Registration",
-                "icon": "ni ni-user-add", 
+                "icon": "ni ni-building", 
                 "subMenu": [
-                    { "id": "2-1-1", "title": "Hostel Registration", "link": "#Hostel-Registration", "icon": "ni ni-check-bold" },  
+                    { "id": "2-1-1", "title": "Hostel Registration", "link": "/adm/Hostel/", "icon": "ni ni-check-bold" },  
                     { "id": "2-1-2", "title": "Student Registration", "link": "#Student-Registration", "icon": "ni ni-person-add" }  
                 ]
             },
@@ -94,18 +138,18 @@
                 "id": "2-3",
                 "title": "Room Management",
                 "link": "#Room Management",
-                "icon": "ni ni-home", 
+                "icon": "ni ni-settings", 
                 "subMenu": [
                     { "id": "2-3-1", "title": "Room Allotment", "link": "#Room-Allotment", "icon": "ni ni-archive-2" },  
                     { "id": "2-3-2", "title": "Room Type", "link": "#Room-type", "icon": "ni ni-layout-11" },  
-                    { "id": "2-3-3", "title": "Bed Status", "link": "#Bed-status", "icon": "ni ni-bullet-list-67" } 
+                    { "id": "2-3-3", "title": "Bed Status", "link": "/adm/Hostel/Hostel-Bed-Status", "icon": "ni ni-bullet-list-67" } 
                 ]
             },
             {
                 "id": "2-4",
                 "title": "Meals & Meals",
                 "link": "#Meals Meals",
-                "icon": "ni ni-fast-food",  
+                "icon": "ni ni-key-25",  
                 "subMenu": [
                     { "id": "2-4-1", "title": "Meal Schedule", "link": "#Meal-Schedule", "icon": "ni ni-calendar-grid-58" }, 
                     { "id": "2-4-2", "title": "Food Categories", "link": "#Food-Categories", "icon": "ni ni-basket" },  
@@ -133,6 +177,7 @@
                     { "id": "2-6-3", "title": "Gate Pass History", "link": "#Gate-Pass-History", "icon": "ni ni-time-alarm" } 
                 ]
             }
+           
         ]
     },
     {
@@ -142,36 +187,45 @@
         "subMenu": [
             {
                 "id": "3-1",
-                "title": "Registration",
-                "link": "#Registration",
-                "icon": "ni ni-id-badge", 
-                "subMenu": [
-                    { "id": "3-1-1", "title": "Driver", "link": "#Driver-Registration", "icon": "ni ni-delivery-fast" },  
-                    { "id": "3-1-2", "title": "Vehicle", "link": "#Vehicle-Registration", "icon": "ni ni-car-front" }  
-                ]
+                "title": "Master",
+                "link": "#Master",
+                "icon": "ni ni-tv-2"
             },
             {
                 "id": "3-2",
-                "title": "Diesel",
-                "link": "#Diesel-in",
-                "icon": "ni ni-fuel-pump"
+                "title": "Route Creation",
+                "link": "#RouteCreation",
+                "icon": "ni ni-single-02"
             },
             {
                 "id": "3-3",
-                "title": "Bus Route",
-                "link": "#Bus-Route",
+                "title": "Stage Creation",
+                "link": "#StageCreation",
                 "icon": "ni ni-map-big"
             },
             {
                 "id": "3-4",
-                "title": "Service Detail",
-                "link": "#Service-Detail",
+                "title": "Bus Entry",
+                "link": "#BusEntry",
                 "icon": "ni ni-settings"
             },
             {
                 "id": "3-5",
-                "title": "Insurance Detail",
-                "link": "#Insurance-Detail",
+                "title": "Driver Details",
+                "link": "#DriverDetails",
+                "icon": "ni ni-briefcase-24"
+            }
+            ,
+            {
+                "id": "3-6",
+                "title": "Trip Entry",
+                "link": "#TripEntry",
+                "icon": "ni ni-briefcase-24"
+            },
+            {
+                "id": "3-7",
+                "title": "Trip Change Entry",
+                "link": "#TripChangeEntry",
                 "icon": "ni ni-briefcase-24"
             }
         ]
@@ -181,60 +235,217 @@
         "id": 4,
         "title": "Inventory",
         "icon": "ni ni-books text-info",
-        "link": "#Inventory" 
-    },
+        "link": "#Inventory",
+        "subMenu": [
+            {
+                "id": "4-1",
+                "title": "Category",
+                "link": "#category",
+                "icon": "ni ni-tv-2"
+            },
+            {
+                "id": "4-2",
+                "title": "Subcategory",
+                "link": "#subcategory",
+                "icon": "ni ni-single-02"
+            },
+            {
+                "id": "4-3",
+                "title": "Color Master",
+                "link": "#colormaster",
+                "icon": "ni ni-map-big"
+            },
+            {
+                "id": "4-4",
+                "title": "Item Master",
+                "link": "#itemmaster",
+                "icon": "ni ni-settings"
+            },
+            {
+                "id": "4-5",
+                "title": "Item Price",
+                "link": "#itemprice",
+                "icon": "ni ni-briefcase-24"
+            }
+            ,
+            {
+                "id": "4-6",
+                "title": "Unit Master",
+                "link": "#unitmaster",
+                "icon": "ni ni-briefcase-24"
+            },
+            {
+                "id": "4-7",
+                "title": "Supplier",
+                "link": "#supplier",
+                "icon": "ni ni-briefcase-24"
+            },
+            {
+                "id": "4-8",
+                "title": "Customer",
+                "link": "#customer",
+                "icon": "ni ni-tv-2"
+            },
+            {
+                "id": "4-9",
+                "title": "Discount Master",
+                "link": "#discountmaster",
+                "icon": "ni ni-single-02"
+            },
+            {
+                "id": "4-10",
+                "title": "Purchase",
+                "link": "#purchase",
+                "icon": "ni ni-map-big"
+            },
+            {
+                "id": "4-11",
+                "title": "Sales",
+                "link": "#sales",
+                "icon": "ni ni-settings"
+            },
+            {
+                "id": "4-12",
+                "title": "Purchase Payment",
+                "link": "#purchasepayment",
+                "icon": "ni ni-briefcase-24"
+            }
+            ,
+            {
+                "id": "4-13",
+                "title": "Sales Payment",
+                "link": "#salespayment",
+                "icon": "ni ni-briefcase-24"
+            },
+            {
+                "id": "4-14",
+                "title": "Stock",
+                "link": "#stock",
+                "icon": "ni ni-briefcase-24"
+            }
+        ]
+    }, 
     {
         "id": 5,
         "title": "Accounts",
         "icon": "ni ni-books text-info",
-        "link": "#Accounts"   
+        "link": "#Accounts",
+        "subMenu": [
+            {
+                "id": "5-1",
+                "title": "Student Fees Management",
+                "link": "#studentfeesmanagement",
+                "icon": "ni ni-book-bookmark", 
+                "subMenu": [
+                    { "id": "5-1-1", "title": "Fees Structure", "link": "#feesstructure", "icon": "ni ni-single-copy-04" },  
+                    { "id": "5-1-2", "title": "Automated Fees Collection", "link": "#automatedfeescollection", "icon": "ni ni-fat-add" },
+                    { "id": "5-1-3", "title": "Online Payment Gateway Integration", "link": "#onlinepaymentgatewayintegration", "icon": "ni ni-archive-2" },
+                    { "id": "5-1-4", "title": "Fees Receipts And Invoices", "link": "#feesreceiptsandinvoices", "icon": "ni ni-archive-2" }   
+                ]
+            },
+            {
+                "id": "5-2",
+                "title": "Staff Payroll Salary Calculation",
+                "link": "#staffpayrollsalarycalculation",
+                "icon": "ni ni-chat-round",
+                "subMenu": [
+                    { "id": "5-2-1", "title": "Salary Calculation", "link": "#salarycalculation", "icon": "ni ni-user-run" },  
+                    { "id": "5-2-2", "title": "Salary Slip", "link": "#salaryslip", "icon": "ni ni-user-run" },
+                    { "id": "5-2-3", "title": "Tax Calculation", "link": "#taxcalculation", "icon": "ni ni-user-run" },  
+                    { "id": "5-2-4", "title": "Allowances & Deductions", "link": "#allowances&deductions", "icon": "ni ni-user-run" }
+                ]
+            },
+            {
+                "id": "5-3",
+                "title": "Expense Management",
+                "link": "#Expensemanagement",
+                "icon": "ni ni-bullet-list-67"
+            },
+            {
+                "id": "5-4",
+                "title": "Accounting & Reports",
+                "link": "#Accounting&Reports",
+                "icon": "ni ni-time-alarm"
+            },
+            {
+                "id": "5-5",
+                "title": "Fund Management",
+                "link": "#Fundmanagement",
+                "icon": "ni ni-credit-card"
+            },
+            {
+                "id": "5-6",
+                "title": "Integration With Other Module",
+                "link": "#integrationwithothermodule",
+                "icon": "ni ni-credit-card"
+            },
+            {
+                "id": "5-7",
+                "title": "Student Information System",
+                "link": "#studentinformationsystem",
+                "icon": "ni ni-credit-card",
+                "subMenu": [
+                    { "id": "5-7-1", "title": "Hr", "link": "#Hr", "icon": "ni ni-user-run" },  
+                    { "id": "5-7-2", "title": "Library", "link": "#Library", "icon": "ni ni-user-run" },
+                    { "id": "5-7-3", "title": "Hostel", "link": "#Hostel", "icon": "ni ni-user-run" }  
+                ]
+            }
+        ]
+     
     },
     {
         "id": 6,
+        "title": "Placement",
+        "icon": "ni ni-books text-info" ,
+        "link": "#Placement"    
+    },
+
+    {
+        "id": 7,
         "title": "Reports",
         "icon": "ni ni-books text-info" ,
         "link": "#Reports"    
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "Library",
         "icon": "ni ni-books text-info",  
         "subMenu": [
             {
-                "id": "4-1",
+                "id": "8-1",
                 "title": "Books",
                 "link": "#Books",
                 "icon": "ni ni-book-bookmark", 
                 "subMenu": [
-                    { "id": "4-1-1", "title": "Book Detail", "link": "#Book-Detail", "icon": "ni ni-single-copy-04" },  
-                    { "id": "4-1-2", "title": "New Book", "link": "#New-Book", "icon": "ni ni-fat-add" },
-                    { "id": "4-1-3", "title": "Category", "link": "#Category", "icon": "ni ni-archive-2" }  
+                    { "id": "8-1-1", "title": "Book Detail", "link": "#Book-Detail", "icon": "ni ni-single-copy-04" },  
+                    { "id": "8-1-2", "title": "New Book", "link": "#New-Book", "icon": "ni ni-fat-add" },
+                    { "id": "8-1-3", "title": "Category", "link": "#Category", "icon": "ni ni-archive-2" }  
                 ]
             },
             {
-                "id": "4-2",
+                "id": "8-2",
                 "title": "Book Request",
                 "link": "#Book-request",
                 "icon": "ni ni-chat-round",
                 "subMenu": [
-                    { "id": "4-2-1", "title": "Student Request", "link": "#Student-Request", "icon": "ni ni-user-run" },  
-                    { "id": "4-2-2", "title": "Staff Request", "link": "#Staff-Request", "icon": "ni ni-user-run" }
+                    { "id": "8-2-1", "title": "Student Request", "link": "#Student-Request", "icon": "ni ni-user-run" },  
+                    { "id": "8-2-2", "title": "Staff Request", "link": "#Staff-Request", "icon": "ni ni-user-run" }
                 ]
             },
             {
-                "id": "4-3",
+                "id": "8-3",
                 "title": "Issue History",
                 "link": "#Issue-History",
                 "icon": "ni ni-bullet-list-67"
             },
             {
-                "id": "4-4",
+                "id": "8-4",
                 "title": "Return Period Over",
                 "link": "#Return-period-Over",
                 "icon": "ni ni-time-alarm"
             },
             {
-                "id": "4-5",
+                "id": "8-5",
                 "title": "Fine",
                 "link": "#Fine",
                 "icon": "ni ni-credit-card"
@@ -242,33 +453,33 @@
         ]
     },
     {
-        "id": 8,
+        "id": 9,
         "title": "Exam",
         "icon": "ni ni-collection text-success" ,
         "link": "#Exam"    
     },
     {
-        "id": 9,
+        "id": 10,
         "title": "Certificate",
-        "icon": "fas fa-ribbon text-primary" ,
+        "icon": "ni ni-folder-17 text-primary" ,
         "link": "#Certificate"    
     },
     {
-        "id": 10,
+        "id": 11,
         "title": "Database Backup or Restore",
         "icon": "ni ni-folder-17 text-warning" ,
         "link": "#Database"    
     },
     {
-        "id": 11,
+        "id": 12,
         "title": "Email Setting",
         "icon": "ni ni-email-83 text-danger"  ,
         "link": "#Email-Setting"   
     },
     {
-        "id": 12,
+        "id": 13,
         "title": "SMS Setting",
-        "icon": "ni ni-chat-round text-purple"  ,
+        "icon": "ni ni-email-83 text-primary"  ,
         "link": "#SMS-Setting"   
     }
        

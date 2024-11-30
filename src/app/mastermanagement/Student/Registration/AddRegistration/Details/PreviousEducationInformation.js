@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 function PreviousEducationInformation() {
-    // State to manage the selected qualification level
+    
     const [qualificationLevel, setQualificationLevel] = useState('');
 
-    // Handler for the qualification level change
+    
     const handleQualificationChange = (event) => {
         setQualificationLevel(event.target.value);
     };

@@ -21,12 +21,12 @@ function AddRegistration({ onClose }) {
     };
 
     const prevStep = () => {
-        setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
+        setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));                                     
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Handle form submission logic here
+        
         console.log('Form submitted');
        
     };

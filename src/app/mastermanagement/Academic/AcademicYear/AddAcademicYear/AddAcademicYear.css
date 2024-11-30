@@ -1,0 +1,17 @@
+/* Ensures the form inputs and button have consistent height and spacing */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .form-control, .form-select {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+}
+
